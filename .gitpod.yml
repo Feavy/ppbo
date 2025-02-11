@@ -7,6 +7,14 @@
 image:
     file: .gitpod.Dockerfile
 
+ports:
+- port: 8181
+  onOpen: open-preview
+  name: API
+  description: API Preview
+  visibility: public
+  protocol: https
+
 # tasks:
 #   - init: npm install
 #     command: npm run dev
