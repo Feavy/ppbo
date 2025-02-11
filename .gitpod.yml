@@ -4,16 +4,7 @@
 
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
-image:
-    file: .gitpod.Dockerfile
-
-ports:
-- port: 8181
-  onOpen: open-preview
-  name: API
-  description: API Preview
-  visibility: public
-  protocol: https
+image: gitpod/workspace-bun
 
 # tasks:
 #   - init: npm install
