@@ -1,0 +1,19 @@
+app:
+  image: oven/bun:latest
+  subdomain: ppbo
+  ingress:
+    - port: 8080
+    - port: 8181
+      rule: PathPrefix("/api")
+dependencies:
+  mongo:
+    image: mongo:latest
+    ports:
+      - 27017
+    env:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: "%GENERATE_PASSWORD%"
+    volumes:
+      - name: mongo-data
+        mountPath: /data/db
+        size: 10Gi
